@@ -31,3 +31,10 @@ jobs:
       
     - name: Build
       run: npm run build 
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/deploy-pages@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        publish_dir: ./dist
